@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  display: flex;
+  flex-flow: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  height: 100px;
+  width: 100vw;
+  position: relative;
+}
+
+.sub_header {
+  width: 83%;
+  height: 70px;
+  margin-left: 8%;
+  margin-top: 15px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.navigation {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation li {
+  width: fit-content;
+  margin: 20px 0;
+  padding: 0 6%;
+  line-height: 30px;
+  color: #676767;
+
+  font-family: 'Encode Sans', sans-serif;
+font-style: normal;
+font-weight: normal;
+}
+
+.navigation li:nth-child(2), .navigation li:nth-child(3) {
+  border-right: solid #979797 2px;
+}
+
+.navigation .nav_title {
+font-size: 48px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: .1rem;
+}
+
+.profile_icon {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 25%;
+  right: 2%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.background_header {
+  background-image: url(../img/USA_Bridges_Brooklyn_Bridge_New_York_City_599955_1920x1200.jpg);
+  background-size: cover;
+  background-position-y: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.background {
+  background-image: url(../img/USA_Bridges_Brooklyn_Bridge_New_York_City_599955_1920x1200.jpg);
+  -webkit-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.filter {
+  width: 100%;
+  height: 100%;
+  background: rgba(79, 79, 217, 0.4);
+}
+
+.card {
+  margin: auto auto;
+  width: 570px;
+  background-color: #fff;
+  border: solid rgba(32, 7, 114, 0.2);
+  border-width: 0 1px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-flow: column;
+  border-radius: 10px;
+}
+
+input[type=button] {
+  margin: 21px auto 28px auto;
+  width: 237px;
+  height: 50px;
+
+  background: #F0C700;
+  border-radius: 10px;
+
+  font-family: NATS, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 50px;
+  align-content: center;
+
+  border: none;
+  color: #fff;
+
+  left: 50%;
+
+  display: block;
+}
+
+.form {
+  margin: auto;
+  width: 80%;
+}
+
+.title {
+  margin: 10px auto 20px auto;
+
+  height: 49px;
+
+  font-family: NATS, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 15px;
+
+  align-items: center;
+  text-align: center;
+
+  color: #535353;
+}
+
+input[type=text] {
+  border: 1px solid rgba(54, 54, 54, 0.5);
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 52px;
+
+  padding: 13px;
+
+  font-family: Noto Serif, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  align-items: center;
+
+  color: #6F6949;
+}
+
+input[type=button]:hover, a:hover {
+  cursor: pointer;
+}
+
+.name {
+  width: 47%;
+  margin: 7px 5% 7px auto;
+}
+
+.surname {
+  width: 47%;
+  margin: 7px auto;
+}
+
+.info {
+  width: 100%;
+  margin: 7px auto;
+}
+
+.close {
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/Vector.svg);
+  background-size: cover;
+  margin: 20px 20px auto auto;
+}
+
+section {
+  width: 90%;
+  height: 80%;
+  margin: auto;
+  display: flex;
+}
+
+section .profile {
+  display: flex;
+  flex-flow: column;
+  width: 40%;
+  height: 100%;
+  margin: 0 20px;
+}
+
+section .name_surname {
+  margin: 25px auto;
+
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+section .profile_img {
+  width: 60%;
+  height:auto;
+  margin: 4px auto 24px auto;
+}
+
+section .info {
+  margin: 19px auto;
+  width: fit-content;
+
+  font-family: Encode Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #373737;
+
+}
+
+section .divider {
+  height: 100%;
+  width: 1px;
+  border: 2px solid rgba(151, 151, 151, 0.5);
+}
+
+section .essay {
+  display: flex;
+  flex-flow: column;
+  margin: 0 20px;
+}
+
+section .essay p {
+  width: 80%;
+  height: fit-content;
+  word-break: break-all;
+  text-align: center;
+}
+
+section .essay .essay_title {
+  font-family: Encode Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+
+  margin: 20px auto;
+}
+
+section .essay .essay_text {
+  font-family: Encode Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+align-items: center;
+text-align: center;
+
+color: #373737;
+
+  margin: 20px auto;
+}
