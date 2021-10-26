@@ -1,5 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+@media screen and (max-device-width: 590px) {
+  .card {
+    margin: auto 10px;
+  }
+  .name, .surname {
+    width: 100%;
+  }
+}
+
+@media screen and (min-device-width: 591px) {
+  .card {
+    margin: auto;
+  }
+
+  .name, .surname {
+    width: 47%;
+  }
+}
+
+@media screen and (max-device-width: 378px) {
+  .title_register {
+    font-size: 48px;
+    line-height: 60px;
+  }
+}
+
+@media screen and (min-device-width: 379px) {
+  .title_register {
+    font-size: 64px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-device-width: 780px) {
+  .navigation li {
+    display: none;
+  }
+
+  .sub_header {
+    width: fit-content;
+    margin: 10px auto;
+    padding: 0 30px;
+  }
+
+  section {
+    flex-flow: column;
+  }
+
+  section .profile {
+    width: max-content;
+    margin: 0 auto;
+  }
+
+  .divider {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-device-width: 781px) {
+  .navigation li:nth-child(2), .navigation li:nth-child(3) {
+    border-right: solid #979797 2px;
+  }
+
+  .nav_burger {
+    visibility: hidden;
+  }
+
+  .sub_header {
+    flex: 1 1 auto;
+    margin: 10px auto;
+  }
+
+  section .profile {
+    width: 40%;
+    margin: 0 20px;
+  }
+
+  .divider {
+    width: 0;
+  }
+}
+
 body {
   display: flex;
   flex-flow: column;
@@ -11,12 +94,16 @@ header {
   height: 100px;
   width: 100vw;
   position: relative;
+  display: flex;
+}
+
+.nav_burger {
+  margin: auto 20px;
+  height: 50px;
 }
 
 .sub_header {
-  width: 83%;
   height: 70px;
-  margin-left: 8%;
   margin-top: 15px;
   background-color: #fff;
   border-radius: 20px;
@@ -25,42 +112,36 @@ header {
 .navigation {
   display: flex;
   flex-flow: row;
-  justify-content: space-evenly;
+  justify-content:space-evenly;
   list-style: none;
   width: 100%;
   height: 100%;
 }
 
 .navigation li {
-  width: fit-content;
+  flex: 1 1 auto;
   margin: 20px 0;
-  padding: 0 6%;
   line-height: 30px;
   color: #676767;
+  white-space: nowrap;
+  text-align: center;
 
   font-family: 'Encode Sans', sans-serif;
-font-style: normal;
-font-weight: normal;
-}
-
-.navigation li:nth-child(2), .navigation li:nth-child(3) {
-  border-right: solid #979797 2px;
+  font-style: normal;
+  font-weight: normal;
 }
 
 .navigation .nav_title {
-font-size: 48px;
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: .1rem;
+  font-size: 48px;
+  display: block;
+  align-items: center;
+  text-align: center;
+  letter-spacing: .1rem;
 }
 
 .profile_icon {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  top: 25%;
-  right: 2%;
+  margin: auto 20px;
+  height: 50%;
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -78,6 +159,8 @@ letter-spacing: .1rem;
 
 .background {
   background-image: url(../img/USA_Bridges_Brooklyn_Bridge_New_York_City_599955_1920x1200.jpg);
+  background-size: cover;
+  background-position-y: center;
   -webkit-filter: blur(5px);
   -ms-filter: blur(5px);
   filter: blur(5px);
@@ -96,8 +179,9 @@ letter-spacing: .1rem;
 }
 
 .card {
-  margin: auto auto;
-  width: 570px;
+  max-width: 570px;
+  width: auto;
+  min-height: fit-content;
   background-color: #fff;
   border: solid rgba(32, 7, 114, 0.2);
   border-width: 0 1px;
@@ -110,7 +194,8 @@ letter-spacing: .1rem;
 
 input[type=button] {
   margin: 21px auto 28px auto;
-  width: 237px;
+  width: 40%;
+  min-width: fit-content;
   height: 50px;
 
   background: #F0C700;
@@ -153,6 +238,23 @@ input[type=button] {
   color: #535353;
 }
 
+.title_register {
+  margin: 10px auto 20px auto;
+
+  display: block;
+
+  height: 49px;
+
+  font-family: NATS, serif;
+  font-style: normal;
+  font-weight: normal;
+
+  align-items: center;
+  text-align: center;
+
+  color: #535353;
+}
+
 input[type=text] {
   border: 1px solid rgba(54, 54, 54, 0.5);
   box-sizing: border-box;
@@ -176,12 +278,10 @@ input[type=button]:hover, a:hover {
 }
 
 .name {
-  width: 47%;
   margin: 7px 5% 7px auto;
 }
 
 .surname {
-  width: 47%;
   margin: 7px auto;
 }
 
@@ -208,9 +308,7 @@ section {
 section .profile {
   display: flex;
   flex-flow: column;
-  width: 40%;
   height: 100%;
-  margin: 0 20px;
 }
 
 section .name_surname {
@@ -219,7 +317,7 @@ section .name_surname {
   font-family: Encode Sans;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 36px;
   line-height: 30px;
 
   display: flex;
@@ -232,21 +330,20 @@ section .name_surname {
 section .profile_img {
   width: 60%;
   height:auto;
-  margin: 4px auto 24px auto;
+  margin: 10px auto 24px auto;
 }
 
 section .info {
   margin: 19px auto;
-  width: fit-content;
+  max-width: max-content;
+  word-wrap:break-word;
 
   font-family: Encode Sans;
 font-style: normal;
 font-weight: normal;
 font-size: 24px;
 line-height: 30px;
-/* identical to box height */
 
-display: flex;
 align-items: center;
 text-align: center;
 
@@ -256,8 +353,7 @@ color: #373737;
 
 section .divider {
   height: 100%;
-  width: 1px;
-  border: 2px solid rgba(151, 151, 151, 0.5);
+  border: 1px solid rgba(151, 151, 151, 0.5);
 }
 
 section .essay {
@@ -288,13 +384,13 @@ section .essay .essay_title {
 
 section .essay .essay_text {
   font-family: Encode Sans;
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-align-items: center;
-text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  align-items: center;
+  text-align: center;
 
-color: #373737;
+  color: #373737;
 
   margin: 20px auto;
 }

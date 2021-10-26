@@ -28,3 +28,7 @@ https://www.figma.com/file/7yXa2ltZ4bqed5hbaO5uXE/Untitled?node-id=0%3A1
 # От 22.10.2021
 
 - Оформление страницы профиля
+
+# От 26.10.2021
+
+- Адаптивная вёрстка
