@@ -1,5 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+.landing_card {
+  width: 80%;
+  margin: auto;
+}
+
+.landing_form {
+  padding: 20px;
+  background-color:ghostwhite;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.landing_form a {
+
+  text-decoration: none;
+
+  margin: 21px auto 28px auto;
+  min-width: fit-content;
+  height: 50px;
+
+  border-radius: 10px;
+  border: solid #F0C700;
+
+  font-family: NATS, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 50px;
+  justify-content: center;
+
+  color: #fff;
+
+  background: #F0C700;
+
+  left: 50%;
+
+  display: flex;
+
+  transition: all .4s;
+}
+
+.landing_form a:hover {
+  color: #F0C700;
+  background-color: #fff;
+}
+
+@media screen and (max-device-width: 425px) {
+  .landing_form {
+    flex-flow: column;
+  }
+
+  .landing_form a {
+    width: 80%;
+  }
+}
+
+@media screen and (min-device-width: 426px) {
+  .landing_form a {
+    width: 40%;
+  }
+}
+
 @media screen and (max-device-width: 590px) {
   .card {
     margin: auto 10px;
@@ -49,7 +112,7 @@
   }
 
   section .profile {
-    width: max-content;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -83,6 +146,27 @@
   }
 }
 
+@media screen and (max-device-width: 452px) {
+  .nav_burger, .profile_icon {
+    margin: auto 3%;
+    width: 12%;
+  }
+
+  .navigation .nav_title {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-device-width: 453px) {
+  .nav_burger, .profile_icon {
+    margin: auto 20px;
+  }
+
+  .navigation .nav_title {
+    font-size: 48px;
+  }
+}
+
 body {
   display: flex;
   flex-flow: column;
@@ -95,11 +179,6 @@ header {
   width: 100vw;
   position: relative;
   display: flex;
-}
-
-.nav_burger {
-  margin: auto 20px;
-  height: 50px;
 }
 
 .sub_header {
@@ -132,7 +211,6 @@ header {
 }
 
 .navigation .nav_title {
-  font-size: 48px;
   display: block;
   align-items: center;
   text-align: center;
@@ -140,7 +218,6 @@ header {
 }
 
 .profile_icon {
-  margin: auto 20px;
   height: 50%;
   background-color: rgba(0, 0, 0, 0);
 }
@@ -179,7 +256,7 @@ header {
 }
 
 .card {
-  max-width: 570px;
+  max-width: 590px;
   width: auto;
   min-height: fit-content;
   background-color: #fff;
@@ -192,28 +269,33 @@ header {
   border-radius: 10px;
 }
 
-input[type=button] {
+.form a {
+  text-decoration: none;
+
   margin: 21px auto 28px auto;
-  width: 40%;
   min-width: fit-content;
   height: 50px;
 
-  background: #F0C700;
+  width: 40%;
+
   border-radius: 10px;
+  border: solid #F0C700;
 
   font-family: NATS, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 48px;
   line-height: 50px;
-  align-content: center;
+  justify-content: center;
 
-  border: none;
   color: #fff;
+
+  background: #F0C700;
 
   left: 50%;
 
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 
 .form {
@@ -270,10 +352,16 @@ input[type=text] {
   line-height: 27px;
   align-items: center;
 
-  color: #6F6949;
+  color: #474747;
 }
 
-input[type=button]:hover, a:hover {
+input[type=text]:focus {
+  outline: none;
+  border-style: outset;
+  border: 1px solid #725f00;
+}
+
+a:hover {
   cursor: pointer;
 }
 
@@ -308,7 +396,7 @@ section {
 section .profile {
   display: flex;
   flex-flow: column;
-  height: 100%;
+  height: fit-content;
 }
 
 section .name_surname {
@@ -365,7 +453,6 @@ section .essay {
 section .essay p {
   width: 80%;
   height: fit-content;
-  word-break: break-all;
   text-align: center;
 }
 
@@ -386,6 +473,7 @@ section .essay .essay_text {
   font-family: Encode Sans;
   font-style: normal;
   font-weight: normal;
+  word-break: break-all;
   font-size: 24px;
   align-items: center;
   text-align: center;

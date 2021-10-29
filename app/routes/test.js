@@ -4,7 +4,7 @@ const path = require("path");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-	res.sendFile(path.join(__dirname, "../page/login.html"));
+	res.sendFile(path.join(__dirname, "../page/index.html"));
 });
 
 router.get("/login", (req, res) => {
@@ -20,4 +20,3 @@ router.get("/profile", (req, res) => {
 });
 
 module.exports = router;
-// экспорт модуля
